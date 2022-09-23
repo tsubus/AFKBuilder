@@ -34,7 +34,8 @@
       if ($AppData.MH.List[hero.id].claimed) {
         if (
           $AppData.MH.List[hero.id].si < hero.si_benchmark &&
-          hero.si_benchmark > 0
+          hero.si_benchmark > 0 &&
+          $AppData.MH.List[hero.id].ascendLv >= 4
         ) {
           buffer.push({
             id: hero.id,
@@ -42,14 +43,20 @@
             value: { si: hero.si_benchmark },
           });
         }
-        if ($AppData.MH.List[hero.id].furn < hero.furn_benchmark) {
+        if (
+          $AppData.MH.List[hero.id].furn < hero.furn_benchmark &&
+          $AppData.MH.List[hero.id].ascendLv >= 6
+        ) {
           buffer.push({
             id: hero.id,
             type: "furn",
             value: { furn: hero.furn_benchmark },
           });
         }
-        if ($AppData.MH.List[hero.id].engraving < hero.engraving_benchmark) {
+        if (
+          $AppData.MH.List[hero.id].engraving < hero.engraving_benchmark &&
+          $AppData.MH.List[heroID].stars > 0
+        ) {
           buffer.push({
             id: hero.id,
             type: "engraving",
