@@ -15,109 +15,48 @@
 
   export let isMobile = false;
 
-  const starredComps = $AppData.Comps.filter((e) => e.starred);
-  const compHeroes = buildCompHeroes();
   let recommendations = buildRecs();
-  const sections = ["Ascension", "Sig. Item", "Furniture", "Eng."];
+  const sections = ["Sig. Item", "Furniture", "Eng."];
 
   $: modalHeight = isMobile ? "75vh" : "80vh";
 
   onMount(async () => {
-    $AppData.activeView = "recommendations";
+    $AppData.activeView = "benchmarkrecommendations";
     dispatch("routeEvent", { action: "saveData" });
   });
-
-  // loop through the hero list for every starred comp and compile a list of all of them
-  function buildCompHeroes() {
-    let buffer = [];
-    for (const comp of starredComps) {
-      for (const [id, data] of Object.entries(comp.heroes)) {
-        if (buffer.some((e) => e.id === id)) {
-          // hero already in buffer, update values only if they're higher
-          let idx = buffer.findIndex((e) => e.id === id);
-          buffer[idx].ascendLv =
-            buffer[idx].ascendLv < data.ascendLv
-              ? data.ascendLv
-              : buffer[idx].ascendLv;
-          buffer[idx].si = buffer[idx].si < data.si ? data.si : buffer[idx].si;
-          buffer[idx].furn =
-            buffer[idx].furn < data.furn ? data.furn : buffer[idx].furn;
-          buffer[idx].engraving =
-            buffer[idx].engraving < data.engraving
-              ? data.engraving
-              : buffer[idx].engraving;
-          buffer[idx].stars =
-            buffer[idx].stars < data.stars ? data.stars : buffer[idx].stars;
-          buffer[idx].core = buffer[idx].core || data.core;
-          buffer[idx].comps.push({ id: comp.uuid, name: comp.name });
-        } else {
-          // new hero, create a new entry
-          buffer.push({
-            id: id,
-            ascendLv: data.ascendLv,
-            si: data.si,
-            furn: data.furn,
-            engraving: data.engraving,
-            stars: data.stars,
-            core: data.core,
-            comps: [{ id: comp.uuid, name: comp.name }],
-          });
-        }
-      }
-    }
-    return buffer;
-  }
 
   // compare compHeroes with MH.List and create recommendation objects where values differ
   function buildRecs() {
     let buffer = [];
-    for (const hero of compHeroes) {
-      if (!$AppData.MH.List[hero.id].claimed) {
-        buffer.push({
-          id: hero.id,
-          type: "ascend",
-          value: { ascendLv: hero.ascendLv, stars: hero.stars },
-          comps: hero.comps,
-          core: hero.core,
-        });
-      } else {
+    let hero;
+    for (let i = 0; i < $HeroData.length; i++) {
+      hero = $HeroData[i];
+      if ($AppData.MH.List[hero.id].claimed) {
         if (
-          $AppData.MH.List[hero.id].ascendLv < hero.ascendLv ||
-          $AppData.MH.List[hero.id].stars < hero.stars
+          $AppData.MH.List[hero.id].si < hero.si_benchmark &&
+          hero.si_benchmark > 0
         ) {
           buffer.push({
             id: hero.id,
-            type: "ascend",
-            value: { ascendLv: hero.ascendLv, stars: hero.stars },
-            comps: hero.comps,
-            core: hero.core,
-          });
-        }
-        if ($AppData.MH.List[hero.id].si < hero.si) {
-          buffer.push({
-            id: hero.id,
             type: "si",
-            value: { si: hero.si },
-            comps: hero.comps,
-            core: hero.core,
+            value: { si: hero.si_benchmark },
           });
         }
-        if ($AppData.MH.List[hero.id].furn < hero.furn) {
+        if ($AppData.MH.List[hero.id].furn < hero.furn_benchmark) {
           buffer.push({
             id: hero.id,
             type: "furn",
-            value: { furn: hero.furn },
-            comps: hero.comps,
-            core: hero.core,
+            value: { furn: hero.furn_benchmark },
           });
         }
-        if ($AppData.MH.List[hero.id].engraving < hero.engraving) {
+        if ($AppData.MH.List[hero.id].engraving < hero.engraving_benchmark) {
           buffer.push({
             id: hero.id,
             type: "engraving",
-            value: { engraving: hero.engraving, stars: hero.stars },
-            comps: hero.comps,
-            core: hero.core,
+            value: {
+              engraving: hero.engraving_benchmark,
+              stars: $AppData.MH.List[hero.id].stars,
+            },
           });
         }
       }
@@ -137,24 +76,8 @@
     } else if (!a.core && b.core) {
       return 1;
     } else {
-      if (a.comps.length > b.comps.length) {
-        return -1;
-      } else if (a.comps.length < b.comps.length) {
-        return 1;
-      } else {
-        return 0;
-      }
+      return 0;
     }
-  }
-
-  async function handleCompClick(compID) {
-    $AppData.selectedComp = compID;
-
-    dispatch("routeEvent", { action: "saveData" });
-    // navigate to comps page and clear all query parameters except the one specified below
-    window.location.assign(
-      `${window.location.origin}/#/comps?view=compDetail&comp=${compID}`
-    );
   }
 
   function handlePortraitClick(heroID) {
@@ -180,10 +103,6 @@
   async function handleClaimClick(heroID, value, type) {
     $AppData.MH.List[heroID].claimed = true;
     switch (type) {
-      case "asc":
-        $AppData.MH.List[heroID].ascendLv = value.ascendLv;
-        $AppData.MH.List[heroID].stars = value.stars;
-        break;
       case "si":
         // allow claiming of si levels before mythic but set to mythic automatically
         if ($AppData.MH.List[heroID].ascendLv < 4)
@@ -237,73 +156,6 @@
     </ul>
   </div>
   {#if $AppData.REC.openSection === 0}
-    <section class="recSection buildSection">
-      <div class="recArea">
-        {#if recommendations.filter((e) => e.type === "ascend").length > 0}
-          {#each recommendations
-            .filter((e) => e.type === "ascend")
-            .sort(sortByCore) as rec (rec.id + "_asc")}
-            <div class="recCard" animate:flip={{ duration: 200 }}>
-              <div class="claimButtonArea">
-                <button
-                  type="button"
-                  class="claimButton"
-                  on:click={handleClaimClick(rec.id, rec.value, "asc")}
-                  >&#10004;</button
-                >
-              </div>
-              <div class="portraitContainer">
-                <button
-                  type="button"
-                  class="portraitButton"
-                  on:click={() => handlePortraitClick(rec.id)}
-                >
-                  <img
-                    class="portrait"
-                    src={$HeroData.find((e) => e.id === rec.id).portrait}
-                    alt={$HeroData.find((e) => e.id === rec.id).name}
-                  />
-                  <span class="coreMark" class:visible={rec.core} />
-                </button>
-              </div>
-              <h4>{$HeroData.find((e) => e.id === rec.id).name}</h4>
-              <div class="starsInputContainer">
-                <StarsInput
-                  value={rec.value.stars}
-                  enabled={rec.value.ascendLv >= 6}
-                  engraving="0"
-                  displayOnly={true}
-                />
-              </div>
-              <div class="recText">
-                <AscendBox
-                  ascendLv={rec.value.ascendLv}
-                  tier={$HeroData.find((e) => e.id === rec.id).tier}
-                />
-              </div>
-              <div class="compArea">
-                <h5>Used in</h5>
-                <ul>
-                  {#each rec.comps as comp}
-                    <li>
-                      <button
-                        type="button"
-                        class="compButton"
-                        on:click={() => handleCompClick(comp.id)}
-                        title={comp.name}>{comp.name}</button
-                      >
-                    </li>
-                  {/each}
-                </ul>
-              </div>
-            </div>
-          {/each}
-        {:else}
-          <div class="noRec"><span>No Build Recommendations</span></div>
-        {/if}
-      </div>
-    </section>
-  {:else if $AppData.REC.openSection === 1}
     <section class="recSection siSection">
       <div class="recArea">
         {#if recommendations.filter((e) => e.type === "si").length > 0}
@@ -342,21 +194,6 @@
                   maxWidth="100px"
                 />
               </div>
-              <div class="compArea">
-                <h5>Used in</h5>
-                <ul>
-                  {#each rec.comps as comp}
-                    <li>
-                      <button
-                        type="button"
-                        class="compButton"
-                        on:click={() => handleCompClick(comp.id)}
-                        title={comp.name}>{comp.name}</button
-                      >
-                    </li>
-                  {/each}
-                </ul>
-              </div>
             </div>
           {/each}
         {:else}
@@ -366,7 +203,7 @@
         {/if}
       </div>
     </section>
-  {:else if $AppData.REC.openSection === 2}
+  {:else if $AppData.REC.openSection === 1}
     <section class="recSection furnSection">
       <div class="recArea">
         {#if recommendations.filter((e) => e.type === "furn").length > 0}
@@ -400,21 +237,6 @@
               <div class="recText">
                 <SIFurnEngBox type="furn" num={rec.value.furn} />
               </div>
-              <div class="compArea">
-                <h5>Used in</h5>
-                <ul>
-                  {#each rec.comps as comp}
-                    <li>
-                      <button
-                        type="button"
-                        class="compButton"
-                        on:click={() => handleCompClick(comp.id)}
-                        title={comp.name}>{comp.name}</button
-                      >
-                    </li>
-                  {/each}
-                </ul>
-              </div>
             </div>
           {/each}
         {:else}
@@ -422,7 +244,7 @@
         {/if}
       </div>
     </section>
-  {:else if $AppData.REC.openSection === 3}
+  {:else if $AppData.REC.openSection === 2}
     <section class="recSection engSection">
       <div class="recArea">
         {#if recommendations.filter((e) => e.type === "engraving").length > 0}
@@ -463,21 +285,6 @@
               </div>
               <div class="recText">
                 <SIFurnEngBox type="engraving" num={rec.value.engraving} />
-              </div>
-              <div class="compArea">
-                <h5>Used in</h5>
-                <ul>
-                  {#each rec.comps as comp}
-                    <li>
-                      <button
-                        type="button"
-                        class="compButton"
-                        on:click={() => handleCompClick(comp.id)}
-                        title={comp.name}>{comp.name}</button
-                      >
-                    </li>
-                  {/each}
-                </ul>
               </div>
             </div>
           {/each}
@@ -640,43 +447,6 @@
     margin: 10px 0px;
     width: 100%;
   }
-  .compArea {
-    width: 100%;
-    h5 {
-      font-size: 1rem;
-      margin: 0;
-      text-align: center;
-      width: 100%;
-      user-select: none;
-    }
-    ul {
-      align-items: center;
-      display: flex;
-      flex-direction: row;
-      flex-wrap: wrap;
-      justify-content: center;
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      .compButton {
-        background-color: transparent;
-        border: none;
-        border-radius: 5px;
-        box-shadow: var(--neu-sm-i-BGColor-shadow);
-        color: var(--appColorPrimary);
-        cursor: pointer;
-        font-size: 1rem;
-        margin: 5px 8px;
-        max-width: 100px;
-        overflow: hidden;
-        padding: 3px;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-    }
-  }
   @media only screen and (min-width: 767px) {
     .recContainer {
       height: 100vh;
@@ -707,15 +477,6 @@
     .claimButton {
       &:hover {
         background: var(--neu-convex-BGColor-bg);
-      }
-    }
-    .compArea {
-      li {
-        .compButton {
-          &:hover {
-            background: var(--neu-convex-BGColor-bg);
-          }
-        }
       }
     }
   }
