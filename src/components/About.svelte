@@ -187,8 +187,26 @@
           </p>
         </div>
       </div>
+      <div class="benchmarkMinDesc areaDescSect">
+        <h2>Minimum Benchmarks</h2>
+        <div class="text">
+          <p>
+            This section will tell you which of your heroes need investment to
+            reach benchmarks.
+          </p>
+        </div>
+      </div>
       <div class="benchmarkRecommendationsDesc areaDescSect">
         <h2>Benchmark Recommendations</h2>
+        <div class="text">
+          <p>
+            This section will tell you which of your heroes need investment to
+            reach benchmarks.
+          </p>
+        </div>
+      </div>
+      <div class="benchmarkMaxDesc areaDescSect">
+        <h2>Maximum Benchmarks</h2>
         <div class="text">
           <p>
             This section will tell you which of your heroes need investment to

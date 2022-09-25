@@ -30,7 +30,9 @@
   import Comps from "./components/Comps.svelte";
   import DataTables from './components/DataTables.svelte';
   import MyHeroes from "./components/MyHeroes.svelte";
+  import BenchmarkMin from "./components/BenchmarkMin.svelte";
   import BenchmarkRecommendations from "./components/BenchmarkRecommendations.svelte";
+  import BenchmarkMax from "./components/BenchmarkMax.svelte";
   import Recommendations from "./components/Recommendations.svelte";
   import About from "./components/About.svelte";
   import CookieConsent from "./components/CookieConsent.svelte";
@@ -48,7 +50,15 @@
     { name: "Explore", icon: "./img/utility/explore_white.png" },
     { name: "Comps", icon: "./img/utility/comps_white.png" },
     {
+      name: "Minimum Benchmarks",
+      icon: "./img/utility/recommendations_white.png",
+    },
+    {
       name: "Benchmark Recommendations",
+      icon: "./img/utility/recommendations_white.png",
+    },
+    {
+      name: "Maximum Benchmarks",
       icon: "./img/utility/recommendations_white.png",
     },
     {
@@ -77,8 +87,16 @@
       component: Comps,
       props: { isMobile: isMobile },
     }),
+    "/minimumbenchmarks": wrap({
+      component: BenchmarkMin,
+      props: { isMobile: isMobile },
+    }),
     "/benchmarkrecommendations": wrap({
       component: BenchmarkRecommendations,
+      props: { isMobile: isMobile },
+    }),
+    "/maximumbenchmarks": wrap({
+      component: BenchmarkMax,
       props: { isMobile: isMobile },
     }),
     "/recommendations": wrap({
