@@ -54,7 +54,7 @@
       icon: "./img/utility/recommendations_white.png",
     },
     {
-      name: "Benchmark Recommendations",
+      name: "Optimal Benchmarks",
       icon: "./img/utility/recommendations_white.png",
     },
     {
@@ -91,7 +91,7 @@
       component: BenchmarkMin,
       props: { isMobile: isMobile },
     }),
-    "/benchmarkrecommendations": wrap({
+    "/optimalbenchmarks": wrap({
       component: BenchmarkRecommendations,
       props: { isMobile: isMobile },
     }),

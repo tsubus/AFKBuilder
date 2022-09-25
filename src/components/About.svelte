@@ -196,8 +196,8 @@
           </p>
         </div>
       </div>
-      <div class="benchmarkRecommendationsDesc areaDescSect">
-        <h2>Benchmark Recommendations</h2>
+      <div class="optimalBenchmarksDesc areaDescSect">
+        <h2>Optimal Benchmarks</h2>
         <div class="text">
           <p>
             This section will tell you which of your heroes need investment to
