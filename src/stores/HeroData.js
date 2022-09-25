@@ -719,7 +719,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 5,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Divine Purge',
@@ -1479,7 +1479,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 25,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Focus Fire',
@@ -1501,7 +1501,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Arrows of Swiftness',
@@ -2543,7 +2543,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Murder of Crows',
@@ -2565,7 +2565,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Devilish Pact',
@@ -4896,7 +4896,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Battle Hardened',
@@ -4918,7 +4918,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Lust for Blood',
@@ -5656,7 +5656,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Fiery Focus',
@@ -5678,7 +5678,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Heart of Fire',
@@ -5808,7 +5808,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Earthly Rejuvenation',
@@ -5982,7 +5982,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Serpentine Servants',
@@ -6818,7 +6818,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 15,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Nature\'s Touch',
@@ -6840,7 +6840,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Winds of Harmony',
@@ -6970,7 +6970,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Elude',
@@ -6992,7 +6992,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Poison\'s Kiss',
@@ -7426,7 +7426,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Nature\'s Shield',
@@ -7448,7 +7448,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Defensive Measures',
@@ -8490,7 +8490,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Pippa Power',
@@ -8512,7 +8512,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Pippa\'s Perfection',
@@ -8642,7 +8642,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Kindred Spirits',
@@ -8664,7 +8664,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Wishful Winds',
@@ -9250,7 +9250,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Forest\'s Restoration',
@@ -9272,7 +9272,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Parrying Posture',
@@ -10682,7 +10682,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Anguished Spirit',
@@ -10704,7 +10704,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Ghastly Hauntings',
@@ -10834,7 +10834,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'King\'s Will',
@@ -10856,7 +10856,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Deadly Attraction',
@@ -10873,7 +10873,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 11,
 		engraving_benchmark_max: -1,
 	},
 	{
@@ -11138,7 +11138,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 15,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Looming Death',
@@ -11898,7 +11898,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Sorrowful Affliction',
@@ -11920,7 +11920,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Entangled Souls',
@@ -11937,7 +11937,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 60,
 		engraving_benchmark_max: -1,
 	},
 	{
@@ -12810,7 +12810,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Blood Feast',
@@ -12832,7 +12832,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Soul Torture',
@@ -13212,7 +13212,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Bloodless',
@@ -13234,7 +13234,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Heaven\'s Justice',
@@ -13251,7 +13251,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 60,
 		engraving_benchmark_max: -1,
 	},
 	{
@@ -15213,7 +15213,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Echoing Atonement',
@@ -15230,7 +15230,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 30,
 		engraving_benchmark_max: -1,
 	},
 	{ id: 'veithael',
@@ -16325,7 +16325,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Virclent Greed',
@@ -16347,7 +16347,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Fiendish Negation',
@@ -16781,7 +16781,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Heart of Malice',
@@ -16933,7 +16933,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Bewilderment',
@@ -16955,7 +16955,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Inertial Plague',
@@ -16972,7 +16972,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 41,
 		engraving_benchmark_max: -1,
 	},
 	{
@@ -18091,7 +18091,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 30,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Heavy Slash',
@@ -18113,7 +18113,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Nature\'s Hand',
@@ -18395,7 +18395,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Assassin\'s Target',
@@ -18417,7 +18417,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 9,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Master Assassin',
@@ -19155,7 +19155,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Bounding Agility',
@@ -19177,7 +19177,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Battle Memory',
@@ -19763,7 +19763,7 @@ const HeroData = readable([
 			},
 		],
 		si_benchmark_min: -1,
-		si_benchmark: 0,
+		si_benchmark: 20,
 		si_benchmark_max: -1,
 		sig_item: {
 			name: 'Standard Protection',
@@ -19785,7 +19785,7 @@ const HeroData = readable([
 			],
 		},
 		furn_benchmark_min: -1,
-		furn_benchmark: 0,
+		furn_benchmark: 3,
 		furn_benchmark_max: -1,
 		furniture: {
 			name: 'Graceful Blessing',
@@ -19802,7 +19802,7 @@ const HeroData = readable([
 			],
 		},
 		engraving_benchmark_min: -1,
-		engraving_benchmark: 0,
+		engraving_benchmark: 30,
 		engraving_benchmark_max: -1,
 	},
 	{
