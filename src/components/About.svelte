@@ -142,51 +142,6 @@
       </p>
     </div>
     <div class="areaDesc">
-      <div class="exploreDesc areaDescSect">
-        <h2>Explore</h2>
-        <div class="text">
-          <p>
-            Explore community made comps! Use our deep filtering system to
-            filter for specific authors, heroes, or tags. Vote for the best
-            comps, and favorite the ones that you want to keep and get
-            recommendations for. Click on a comp to see more details for it, and
-            share that comp simply by copying the URL! You can also sort results
-            how you want:
-          </p>
-          <ul>
-            <li>best - comps are sorted based on upvote and downvote ratio</li>
-            <li>
-              top - for those who don't like algorithms and just want to see the
-              comps with the most upvotes
-            </li>
-            <li>new - see the newest comps uploaded to the site</li>
-            <li>
-              updated - see comps that have recently been updated by their
-              authors
-            </li>
-          </ul>
-        </div>
-      </div>
-      <div class="compDesc areaDescSect">
-        <h2>Comps</h2>
-        <div class="text">
-          <p>
-            Create, edit, import, export, and publish your comps all in one
-            area. Any comps you favorite in <em>Explore</em> will appear here (although
-            you won't be able to edit them). Starring comps in this area automatically
-            sends all of their heroes into your personalized recommendation section.
-            Create or edit comps with our powerful editor, and when you're done,
-            publish your creation so others can find it!
-          </p>
-          <p>
-            Want to get organized? Group comps however you want with the group
-            engine. Of course you can still search, sort, and filter comps in
-            this area just like you can in <em>Explore</em>. Note: only comps
-            you have saved locally will appear in <em>Comps</em>. For community
-            comps, check out the <em>Explore</em> section.
-          </p>
-        </div>
-      </div>
       <div class="benchmarkMinDesc areaDescSect">
         <h2>Minimum Benchmarks</h2>
         <div class="text">
@@ -214,20 +169,6 @@
           </p>
         </div>
       </div>
-      <div class="recommendationsDesc areaDescSect">
-        <h2>Recommendations</h2>
-        <div class="text">
-          <p>
-            Ever wonder what to build next? This section will tell you! First,
-            fill in your heroes into the <em>My Heroes</em> area, then star
-            comps in the <em>Comps</em> section to receive personalized hero
-            investment recommendations. Heroes in a comp you have starred that
-            you do not yet have fully invested will appear here. You can tap on
-            the checkmark for any investment you've completed to automatically
-            update your <em>My Heroes</em>.
-          </p>
-        </div>
-      </div>
       <div class="myHeroesDesc areaDescSect">
         <h2>My Heroes</h2>
         <div class="text">
@@ -239,19 +180,6 @@
             complete this section. Of course you would also then be missing out
             on powerful searching and filtering that's available, but that's
             your choice.
-          </p>
-        </div>
-      </div>
-      <div class="heroListDesc areaDescSect">
-        <h2>Hero List</h2>
-        <div class="text">
-          <p>
-            Say hello to our database of every hero in Esperia. Don't remember
-            what Mortas' 'Greed' skill does? Come here and find out (or just tap
-            on his portrait in a comp). Want to see how many Celestial Rangers
-            are in the game? Use our powerful search and filters to find exactly
-            what you want. Hero SI, Furniture, and Engraving recommendations are
-            gathered from various publically available community guides.
           </p>
         </div>
       </div>
