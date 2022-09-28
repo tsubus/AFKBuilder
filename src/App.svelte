@@ -47,8 +47,6 @@
 
   export let version = "";
   const menuItems = [
-    { name: "Explore", icon: "./img/utility/explore_white.png" },
-    { name: "Comps", icon: "./img/utility/comps_white.png" },
     {
       name: "Minimum Benchmarks",
       icon: "./img/utility/recommendations_white.png",
@@ -61,12 +59,7 @@
       name: "Maximum Benchmarks",
       icon: "./img/utility/recommendations_white.png",
     },
-    {
-      name: "Recommendations",
-      icon: "./img/utility/recommendations_white.png",
-    },
     { name: "My Heroes", icon: "./img/utility/my_heroes_white.png" },
-    { name: "Hero List", icon: "./img/utility/hero_list_white.png" },
     { name: "About", icon: "./img/utility/about_white.png" },
   ];
   const defaultView = "comps";
