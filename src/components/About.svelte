@@ -100,31 +100,31 @@
     </button>
   </div>
   <div class="titleContainer">
-    <h1>AFKBuilder</h1>
+    <h1>AFKBenchmarks</h1>
   </div>
   <section class="aboutApp">
     <div class="generalDesc">
       <p>
-        AFKBuilder is an <a
-          href="https://github.com/Dae314/AFKBuilder"
+        AFKBenchmarks is an <a
+          href="https://github.com/Dae314/AFKBenchmarks"
           target="_blank"
           rel="noreferrer noopener">open source</a
         > tool designed to help players build, share, and use community made team
         compositions for AFK Arena.
       </p>
       <p>
-        Login to get the most out of AFKBuilder! Until you login, AFKBuilder
+        Login to get the most out of AFKBenchmarks! Until you login, AFKBenchmarks
         runs entirely on your browser, and your data is stored in its local
         storage. If you do not login, you will still be able to explore
         community comps and make your own, <em
           >but you will not be able to like, dislike, favorite, or publish
           comps.</em
-        > Users who login will have full access to all of the features in AFKBuilder,
+        > Users who login will have full access to all of the features in AFKBenchmarks,
         and their Comps and My Heroes saved to their server profile so if you login
         on multiple devices, you will be able to see the same data.
       </p>
       <p>
-        AFKBuilder stores minimal personal information only when you login. We
+        AFKBenchmarks stores minimal personal information only when you login. We
         store no information on users who do not login. For more information
         about the data we store, see our <a
           href={`${window.location.origin}/#/privacy`}
@@ -134,7 +134,7 @@
         configuration.
       </p>
       <p>
-        By using AFKBuilder, you agree to our <a
+        By using AFKBenchmarks, you agree to our <a
           href={`${window.location.origin}/#/terms`}
           target="_blank"
           rel="noreferrer noopener">Terms of Service</a
@@ -224,7 +224,7 @@
   <section class="affiliate">
     <div class="disclaimer">
       <span
-        >AFKBuilder has no affiliation with <a
+        >AFKBenchmarks has no affiliation with <a
           href="https://www.lilithgames.com/"
           target="_blank"
           rel="noreferrer noopener">Lilith Games</a

@@ -20,7 +20,7 @@
 
 {#if showCookieConsent}
 	<div class="cookieConsentContainer" transition:fly="{{ y: 100, duration: 600 }}">
-		<div class="cookieConsentText">AFKBuilder only stores information that is strictly necessary for the functionality of the application and the saving of preferences on your device. No tracking, marketing, or statistics data is stored or collected.</div>
+		<div class="cookieConsentText">AFKBenchmarks only stores information that is strictly necessary for the functionality of the application and the saving of preferences on your device. No tracking, marketing, or statistics data is stored or collected.</div>
 		<button type="button" class="closeButton" on:click={closeCookieConsent}>Accept All</button>
 	</div>
 {/if}

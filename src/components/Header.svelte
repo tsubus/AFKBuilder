@@ -76,7 +76,7 @@
 		</button>
 		<ul class="navbar-list" class:mobile={showMobileMenu} class:dark={$AppData.colorProfile === 'dark'}>
 			<li class="logoContainer" on:click={() => handleMenuChange(menu[1].name.toLowerCase().replace(/\s/g, ''))}>
-				<button type="button" class="logo"><img src="./img/app/afkbuilder_logo.png" alt="AFKBuilder"></button>
+				<button type="button" class="logo"><img src="./img/app/afkbuilder_logo.png" alt="AFKBenchmarks"></button>
 			</li>
 			{#each menu as item}
 				<li on:click={() => handleMenuChange(item.name.toLowerCase().replace(/\s/g, ''))}>
