@@ -73,7 +73,7 @@
 
   const routes = {
     "/": wrap({
-      component: Comps,
+      component: BenchmarkRecommendations,
       props: { isMobile: isMobile },
     }),
     "/comps": wrap({
